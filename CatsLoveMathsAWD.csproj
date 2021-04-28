@@ -1,0 +1,334 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{612AD388-1097-4D76-A404-C615E9A75DB4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CatsLoveMathsAWD</RootNamespace>
+    <AssemblyName>CatsLoveMathsAWD</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.52">
+      <HintPath>..\..\Bunifu\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CLMDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CLMDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Difficulty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Difficulty.Designer.cs">
+      <DependentUpon>Difficulty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Easy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Easy.Designer.cs">
+      <DependentUpon>Easy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DBConnection.cs" />
+    <Compile Include="EasyMap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EasyMap.Designer.cs">
+      <DependentUpon>EasyMap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ResetPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResetPassword.Designer.cs">
+      <DependentUpon>ResetPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HighScore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HighScore.Designer.cs">
+      <DependentUpon>HighScore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StringSeperator.cs" />
+    <Compile Include="Hard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hard.Designer.cs">
+      <DependentUpon>Hard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Map.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Map.Designer.cs">
+      <DependentUpon>Map.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Medium.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Medium.Designer.cs">
+      <DependentUpon>Medium.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Register.Designer.cs">
+      <DependentUpon>Register.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings.Designer.cs">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Startscreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Startscreen.Designer.cs">
+      <DependentUpon>Startscreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Difficulty.resx">
+      <DependentUpon>Difficulty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Easy.resx">
+      <DependentUpon>Easy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EasyMap.resx">
+      <DependentUpon>EasyMap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hard.resx">
+      <DependentUpon>Hard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HighScore.resx">
+      <DependentUpon>HighScore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Map.resx">
+      <DependentUpon>Map.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Medium.resx">
+      <DependentUpon>Medium.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Register.resx">
+      <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResetPassword.resx">
+      <DependentUpon>ResetPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings.resx">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Startscreen.resx">
+      <DependentUpon>Startscreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="CLMDBDataSet.xsc">
+      <DependentUpon>CLMDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CLMDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CLMDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CLMDBDataSet.xss">
+      <DependentUpon>CLMDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\front.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Click.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Click.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cat_left1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cat_left2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cat_right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cat_right1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cat_right2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cat_back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cat_front.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cat_left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cat_back1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cat_back2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cat_front1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cat_front2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Meow.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settinglogo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settinglogo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CLM_MapSong.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CLMS_ThemeSong.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exitlogo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\highscorelogo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\highscorelogo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exitlogo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Medium1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Medium2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hard2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Easy1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Easy2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hard1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Wrong Answer.wav" />
+    <None Include="Resources\Right Answer.wav" />
+    <None Include="Resources\Ready Go.wav" />
+    <None Include="Resources\walk.wav" />
+    <None Include="Resources\venus2.png" />
+    <None Include="Resources\venus1.png" />
+    <None Include="Resources\mercury2.png" />
+    <None Include="Resources\mercury1.png" />
+    <None Include="Resources\mars2.png" />
+    <None Include="Resources\mars1.png" />
+    <None Include="Resources\moon1.png" />
+    <None Include="Resources\moon2.png" />
+    <None Include="Resources\jupiter2.png" />
+    <None Include="Resources\jupiter1.png" />
+    <None Include="Resources\uranus1.png" />
+    <None Include="Resources\uranus2.png" />
+    <None Include="Resources\pluto2.png" />
+    <None Include="Resources\pluto1.png" />
+    <None Include="Resources\saturn2.png" />
+    <None Include="Resources\saturn1.png" />
+    <None Include="Resources\neptune2.png" />
+    <None Include="Resources\neptune1.png" />
+    <None Include="Resources\Pluto_ori.png" />
+    <None Include="Resources\earth1.png" />
+    <None Include="Resources\earth2.png" />
+    <None Include="Resources\difficulty.jpg" />
+    <Content Include="Resources\icon.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
